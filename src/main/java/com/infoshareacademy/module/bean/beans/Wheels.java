@@ -1,0 +1,12 @@
+package com.infoshareacademy.module.bean.beans;
+
+import org.springframework.stereotype.Component;
+
+@Component
+class Wheels {
+
+    void roll() {
+        System.out.println("Wheels are rolling");
+    }
+
+}
