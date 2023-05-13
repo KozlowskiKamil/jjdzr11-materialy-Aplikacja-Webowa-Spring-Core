@@ -1,15 +1,14 @@
 package com.infoshareacademy.module.exercise01;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class CoffeeVendingMachine {
 
-    private CoffeeMaker coffeeMaker;
+    private final CoffeeMaker coffeeMaker;
 
-    @Autowired
-    public void setCoffeeMaker(CoffeeMaker coffeeMaker) {
+    public CoffeeVendingMachine(@Qualifier("MacchiatoMaker") CoffeeMaker coffeeMaker) {
         this.coffeeMaker = coffeeMaker;
     }
 

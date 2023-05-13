@@ -1,9 +1,12 @@
 package com.infoshareacademy.module.exercise01;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-//@Component
-public class MacchiatoMaker implements CoffeeMaker{
+@Component
+@Qualifier("MacchiatoMaker")
+//@Profile("MacchiatoMaker")
+public class MacchiatoMaker implements CoffeeMaker {
 
     @Override
     public void getCoffee() {
