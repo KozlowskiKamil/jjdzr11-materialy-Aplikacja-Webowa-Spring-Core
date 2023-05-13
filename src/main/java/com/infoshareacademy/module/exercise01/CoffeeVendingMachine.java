@@ -6,8 +6,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class CoffeeVendingMachine {
 
-    @Autowired
     private CoffeeMaker coffeeMaker;
+
+    @Autowired
+    public void setCoffeeMaker(CoffeeMaker coffeeMaker) {
+        this.coffeeMaker = coffeeMaker;
+    }
 
     public void getCoffee() {
         coffeeMaker.getCoffee();
